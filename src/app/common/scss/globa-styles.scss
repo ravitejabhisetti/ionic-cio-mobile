@@ -1,0 +1,10 @@
+@import "./global-variables.scss";
+@import "./global-mixins.scss";
+
+.cio-green-button {
+    @include cio-button($cio-button-height, $cio-width-hundred-percent, $cio-white-color);
+    --background: #63aa00;
+    --background-activated:#000;
+    --box-shadow: 0 0 24px 0 rgba(142, 198, 64, 0.5);
+    --border-radius: 60px;
+}

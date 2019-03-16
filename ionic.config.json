@@ -1,5 +1,7 @@
 {
   "name": "ionic-cio-mobile",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

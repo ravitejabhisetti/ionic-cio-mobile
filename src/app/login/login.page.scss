@@ -1,0 +1,12 @@
+@import "../common/scss/globa-styles.scss";
+
+.login-section {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+    position: absolute;
+    padding: 10px;
+}

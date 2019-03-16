@@ -1,0 +1,13 @@
+@import "./global-variables.scss";
+
+@mixin cio-button( $height: $cio-button-height, 
+$width: $cio-width-hundred-percent, $color: $cio-white-color, 
+$font-family: $cio-raleway-family, $font-weight: $cio-font-bold, $font-size: $cio-button-text-font-size) {
+height: $height;
+width: $width;
+color: $color;
+font-family: $font-family;
+font-weight: $font-weight;
+font-size: $font-size;
+text-transform: uppercase;
+}
