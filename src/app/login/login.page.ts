@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'login-page',
@@ -7,5 +8,10 @@ import { Component } from '@angular/core';
 })
 
 export class LoginPage {
+    constructor(private router: Router) {
+    }
 
+    navigateToHome() {
+        this.router.navigateByUrl('/home');
+    }
 }
