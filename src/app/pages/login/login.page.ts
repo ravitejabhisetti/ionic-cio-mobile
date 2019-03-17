@@ -12,6 +12,6 @@ export class LoginPage {
     }
 
     navigateToHome() {
-        this.router.navigateByUrl('/home');
+        this.router.navigateByUrl('/menu/home');
     }
 }
