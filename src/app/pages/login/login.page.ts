@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,8 +7,12 @@ import { Router } from '@angular/router';
     styleUrls: ['login.page.scss']
 })
 
-export class LoginPage {
+export class LoginPage implements OnInit {
     constructor(private router: Router) {
+    }
+
+    ngOnInit() {
+        console.log('in login on in it check');
     }
 
     navigateToHome() {
