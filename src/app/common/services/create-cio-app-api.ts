@@ -5,7 +5,6 @@ import * as constants from '../core/cio-constants';
 export function createCioAppApi(
     xhrBackend: XHRBackend,
     requestOptions: RequestOptions) {
-    requestOptions.withCredentials = true;
     const ngHttp = new Http(xhrBackend, requestOptions);
     const baseUrl = constants.firebaseUrl;
     return new CioAppApiService(ngHttp, baseUrl);

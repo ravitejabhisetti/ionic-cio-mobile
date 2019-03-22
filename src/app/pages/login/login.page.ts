@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { LoginService } from './shared/services/login-services';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,15 +9,18 @@ import { Router } from '@angular/router';
     styleUrls: ['login.page.scss']
 })
 
-export class LoginPage implements OnInit {
-    constructor(private router: Router) {
+export class LoginPage {
+    constructor(
+        private router: Router,
+        private splashScreen: SplashScreen,
+        private loginService: LoginService) {
     }
 
-    ngOnInit() {
-        console.log('in login on in it check');
+    ionViewDidLoad() {
+        this.splashScreen.hide();
     }
 
     navigateToHome() {
-        this.router.navigateByUrl('/menu/home');
+        this.loginService.getToken();
     }
 }

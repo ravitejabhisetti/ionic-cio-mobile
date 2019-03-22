@@ -1,8 +1,9 @@
+import { Router } from '@angular/router';
 import { Component } from '@angular/core';
-
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { Storage } from '@ionic/storage';
+import { Platform, Events } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import * as constants from './common/core/cio-constants';
 
 @Component({
   selector: 'app-root',
@@ -12,17 +13,29 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   constructor(
     private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private events: Events,
+    private storage: Storage,
+    private router: Router
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      console.log('in ready check---');
       this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      this.events.subscribe(constants.cio_login_success, () => {
+        this.processLogin();
+      });
+      this.processLogin();
     });
+  }
+
+  processLogin() {
+    this.storage.get(constants.login_token).then((loginToken) => {
+      if (loginToken) {
+        this.router.navigateByUrl('/menu/home');
+      }
+    })
   }
 }

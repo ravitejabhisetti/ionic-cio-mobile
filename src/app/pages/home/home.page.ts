@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage {
+  constructor(private splashScreen: SplashScreen) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ionViewDidLoad() {
+    this.splashScreen.hide();
   }
-
 }

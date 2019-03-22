@@ -27,8 +27,7 @@ export class CioAppApiService {
     }
 
     toCioApiResponse(response: any): CioApiResponse {
-        return {
-            data: response.json()
-        }
+        return response.json()
+
     }
 }
