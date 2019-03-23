@@ -34,13 +34,18 @@ export class LoginEffects {
     ) { }
 
     getLoginTokenObservable$() {
+        this.events.publish(constants.handle_loader, { showLoader: true, loaderMessage: constants.login_loader_message });
         return this.loginHttpService.getLoginToken().pipe(
             map((data: any) => {
                 this.storage.set(constants.login_token, data.id_token);
                 this.events.publish(constants.cio_login_success);
+                this.events.publish(constants.handle_loader, { showLoader: false });
                 return new LoginActions.GetLoginTokenSuccess(data.id_token);
             }),
-            catchError((error) => { return throwError(error); }))
+            catchError((error) => {
+                this.events.publish(constants.handle_loader, { showLoader: false });
+                return throwError(error);
+            }))
     }
 
     getLoginToken() {

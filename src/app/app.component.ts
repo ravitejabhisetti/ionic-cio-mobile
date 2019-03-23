@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage';
-import { Platform, Events } from '@ionic/angular';
+import { Platform, Events, LoadingController } from '@ionic/angular';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import * as constants from './common/core/cio-constants';
 
@@ -11,12 +11,14 @@ import * as constants from './common/core/cio-constants';
   styleUrls: ['./common/scss/globa-styles.scss']
 })
 export class AppComponent {
+  loading: any;
   constructor(
     private platform: Platform,
     private statusBar: StatusBar,
     private events: Events,
     private storage: Storage,
-    private router: Router
+    private router: Router,
+    private loadingController: LoadingController
   ) {
     this.initializeApp();
   }
@@ -27,8 +29,20 @@ export class AppComponent {
       this.events.subscribe(constants.cio_login_success, () => {
         this.processLogin();
       });
+      this.events.subscribe(constants.handle_loader, (loaderInfo) => {
+        this.processLoader(loaderInfo);
+      })
       this.processLogin();
     });
+  }
+
+  async processLoader(loaderInfo) {
+    if (loaderInfo.showLoader) {
+      this.loading = await this.loadingController.create({message: loaderInfo.loaderMessage});
+      await this.loading.present();
+    } else {
+      this.loading.dismiss();
+    }
   }
 
   processLogin() {

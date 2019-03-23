@@ -1,18 +1,14 @@
 
 <ion-split-pane>
-  <ion-menu side="start" contentId="content1" menuId="first">
+  <ion-menu side="start" type="overlay" contentId="content1" menuId="first">
     <ion-header>
       <ion-toolbar color="primary">
-        <ion-title>Start Menu</ion-title>
+        <ion-title>Menu</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
+        <ion-item (click)="logOut()">Log Out</ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>
