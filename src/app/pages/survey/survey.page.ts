@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-survey',
@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./survey.page.scss'],
 })
 export class SurveyPage implements OnInit {
-
+  selectedTab: string = 'all';
   constructor() { }
 
   ngOnInit() {
+  }
+
+  selectTab(tab) {
+    this.selectedTab = tab;
   }
 
 }

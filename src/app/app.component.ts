@@ -48,7 +48,7 @@ export class AppComponent {
   processLogin() {
     this.storage.get(constants.login_token).then((loginToken) => {
       if (loginToken) {
-        this.router.navigateByUrl('/menu/home');
+        this.router.navigateByUrl('/menu/home/tabs/survey');
       }
     })
   }

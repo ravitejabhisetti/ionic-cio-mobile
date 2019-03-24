@@ -1,15 +1,15 @@
 <ion-content>
-  <ion-tabs>
-      <ion-tab-bar slot="top">
-          <ion-tab-button tab="survey/innerTabs/all">
-              <ion-label>All</ion-label>
-          </ion-tab-button>
-          <ion-tab-button tab="survey/innerTabs/poll">
-              <ion-label>Poll</ion-label>
-          </ion-tab-button>
-          <ion-tab-button tab="survey/innerTabs/trivia">
-            <ion-label>Trivia</ion-label>
-        </ion-tab-button>
-      </ion-tab-bar>
-  </ion-tabs>
+    <ion-tabs>
+        <ion-tab-bar slot="top">
+            <ion-tab-button [ngClass]="selectedTab==='all'?'selected-tab':''" (click)="selectTab('all')" tab="survey/innerTabs/all">
+                <ion-label>All</ion-label>
+            </ion-tab-button>
+            <ion-tab-button [ngClass]="selectedTab==='poll'?'selected-tab':''" (click)="selectTab('poll')" tab="survey/innerTabs/poll">
+                <ion-label>Poll</ion-label>
+            </ion-tab-button>
+            <ion-tab-button [ngClass]="selectedTab==='trivia'?'selected-tab':''" (click)="selectTab('trivia')" tab="survey/innerTabs/trivia">
+                <ion-label>Trivia</ion-label>
+            </ion-tab-button>
+        </ion-tab-bar>
+    </ion-tabs>
 </ion-content>
