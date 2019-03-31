@@ -13,7 +13,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path:'tabs',
+    path: 'tabs',
     component: HomePage,
     children: [
       {

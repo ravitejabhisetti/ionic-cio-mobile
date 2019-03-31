@@ -3,11 +3,11 @@ import { Injectable } from '@angular/core';
 import * as constants from '../../../../common/core/cio-constants';
 
 @Injectable()
-export class LoginHttpService {
+export class SurveyHttpService {
     constructor(private cioAppApiService: CioAppApiService) { }
 
-    getLoginToken() {
-        return this.cioAppApiService.get(constants.loginPath).map((res) => {
+    getSurveyData() {
+        return this.cioAppApiService.get(constants.surveyPath).map((res) => {
             return res;
         });
     }

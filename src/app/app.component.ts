@@ -31,17 +31,19 @@ export class AppComponent {
       });
       this.events.subscribe(constants.handle_loader, (loaderInfo) => {
         this.processLoader(loaderInfo);
-      })
+      });
       this.processLogin();
     });
   }
 
   async processLoader(loaderInfo) {
     if (loaderInfo.showLoader) {
-      this.loading = await this.loadingController.create({message: loaderInfo.loaderMessage});
+      this.loading = await this.loadingController.create({ message: loaderInfo.loaderMessage });
       await this.loading.present();
     } else {
-      this.loading.dismiss();
+      if (this.loading) {
+        this.loading.dismiss();
+      }
     }
   }
 
@@ -50,6 +52,6 @@ export class AppComponent {
       if (loginToken) {
         this.router.navigateByUrl('/menu/home/tabs/survey');
       }
-    })
+    });
   }
 }

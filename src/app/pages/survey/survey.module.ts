@@ -1,3 +1,6 @@
+import { EffectsModule } from '@ngrx/effects';
+import { SurveyService } from './shared/services/survey-services';
+import { SurveyHttpService } from './shared/services/survey-http-services';
 import { TriviaSurveysComponent } from './trivia-surveys/trivia-surveys.component';
 import { PollSurveysComponent } from './poll-surveys/poll-surveys.component';
 import { AllSurveysComponent } from './all-surveys/all-surveys.component';
@@ -9,6 +12,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SurveyPage } from './survey.page';
+import { SurveyEffects } from './shared/effects';
+import { StoreModule } from '@ngrx/store';
+import { SurveyReducers } from './shared/reducers/survey-reducers';
 
 const routes: Routes = [
   {
@@ -36,8 +42,11 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    EffectsModule.forFeature([SurveyEffects]),
+    StoreModule.forFeature('surveyModule', SurveyReducers),
     RouterModule.forChild(routes)
   ],
+  providers: [SurveyHttpService, SurveyService],
   declarations: [SurveyPage, AllSurveysComponent, PollSurveysComponent, TriviaSurveysComponent]
 })
 export class SurveyPageModule { }

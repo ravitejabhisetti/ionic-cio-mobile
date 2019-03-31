@@ -1,15 +1,23 @@
-<ion-split-pane>
-  <ion-menu side="start" type="overlay" contentId="content1" menuId="first">
-    <ion-header>
-      <ion-toolbar color="primary">
-        <ion-title>Menu</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content>
-      <ion-list>
-        <ion-item (click)="logOut()">Log Out</ion-item>
-      </ion-list>
-    </ion-content>
-  </ion-menu>
-  <ion-router-outlet id="content1" main></ion-router-outlet>
-</ion-split-pane>
+<ion-menu side="start" type="overlay" contentId="content1" menuId="first">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item (click)="logOut()">Log Out</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-menu-button class="icon-menu"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/cio_banner_logo.png" class="cio-logo" />
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+<ion-router-outlet id="content1" main></ion-router-outlet>
+</ion-content>

@@ -5,4 +5,8 @@ import { Component } from '@angular/core';
     templateUrl: 'all-surveys.component.html'
 })
 
-export class AllSurveysComponent {}
+export class AllSurveysComponent {
+    ionViewWillEnter() {
+     console.log('in all survey component---');
+    }
+}

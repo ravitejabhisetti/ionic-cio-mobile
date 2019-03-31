@@ -1,5 +1,5 @@
 import { Events } from '@ionic/angular';
-import { LoginModuleState, loginResponse } from './../models/index';
+import { LoginModuleState, LoginResponse } from './../models/index';
 import { Observable, of, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
@@ -22,9 +22,9 @@ export class LoginEffects {
             switchMap(() => {
                 return this.getLoginToken().pipe(catchError((error) => {
                     return of(new LoginActions.GetLoginTokenFail());
-                }))
+                }));
             })
-        )
+        );
     constructor(
         private action$: Actions,
         private store: Store<LoginModuleState>,
@@ -45,12 +45,12 @@ export class LoginEffects {
             catchError((error) => {
                 this.events.publish(constants.handle_loader, { showLoader: false });
                 return throwError(error);
-            }))
+            }));
     }
 
     getLoginToken() {
         return this.getLoginTokenObservable$().pipe(catchError((error: any) => {
             return throwError(error);
-        }))
+        }));
     }
 }

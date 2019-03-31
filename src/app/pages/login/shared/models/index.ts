@@ -8,6 +8,6 @@ export interface LoginModuleState {
     loginModule: LoginState;
 }
 
-export interface loginResponse {
+export interface LoginResponse {
     id_token: string;
 }

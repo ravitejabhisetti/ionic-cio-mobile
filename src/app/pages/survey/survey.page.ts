@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { SurveyService } from './shared/services/survey-services';
 
 @Component({
   selector: 'app-survey',
@@ -6,10 +7,18 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./survey.page.scss'],
 })
 export class SurveyPage implements OnInit {
-  selectedTab: string = 'all';
-  constructor() { }
+  selectedTab = 'all';
+  constructor(
+    private surveyService: SurveyService
+  ) { }
+
+  ionViewWillEnter() {
+   console.log('in survey ion view enter check---');
+  }
 
   ngOnInit() {
+    console.log('in ng on init check--');
+    this.surveyService.getSurveyData(true);
   }
 
   selectTab(tab) {
