@@ -12,12 +12,7 @@ export class SurveyPage implements OnInit {
     private surveyService: SurveyService
   ) { }
 
-  ionViewWillEnter() {
-   console.log('in survey ion view enter check---');
-  }
-
   ngOnInit() {
-    console.log('in ng on init check--');
     this.surveyService.getSurveyData(true);
   }
 
