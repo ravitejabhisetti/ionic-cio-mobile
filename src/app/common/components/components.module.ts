@@ -11,14 +11,14 @@ import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.
         CioEmptyComponent,
         CioCardsListComponent,
         CioSurveyHeaderComponent,
-        CioSurveyBodyComponent
+        CioSurveyBodyComponent,
     ],
     imports: [CommonModule, IonicModule],
     exports: [
         CioEmptyComponent,
         CioCardsListComponent,
         CioSurveyBodyComponent,
-        CioSurveyHeaderComponent
+        CioSurveyHeaderComponent,
     ]
 })
 

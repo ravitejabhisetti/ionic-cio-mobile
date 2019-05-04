@@ -25,7 +25,7 @@
 .cio-card {
     border-radius: 8px;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
-    height: 252px;
+    height: 220px;
     background-color: #ffffff;
 }
 
@@ -43,4 +43,25 @@
 
 .cio-font-normal {
     font-weight: normal;
+}
+
+.cio-card-header {
+    height: 84px;
+    background-color: #00565b;
+}
+
+.cio-info-btn {
+    border-radius: 11px;
+    height: 22px;
+    border: 1px solid #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.17;
+    letter-spacing: 0.7px;
+    text-align: left;
+}
+
+.card-info-row {
+    padding-top: 12px;
+    margin-left: 12px;
 }
