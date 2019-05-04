@@ -1,3 +1,4 @@
+import { ComponentsModule } from './common/components/components.module';
 import { EffectsModule } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -23,6 +24,7 @@ import { IonicStorageModule } from '@ionic/storage';
   imports: [BrowserModule,
     CommonModule,
     HttpModule,
+    ComponentsModule,
     IonicStorageModule.forRoot(),
     StoreModule.forRoot({appAuthModule: AppReducers}),
     EffectsModule.forRoot([]),

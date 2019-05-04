@@ -1,3 +1,4 @@
+import { ComponentsModule } from './../../common/components/components.module';
 import { EffectsModule } from '@ngrx/effects';
 import { SurveyService } from './shared/services/survey-services';
 import { SurveyHttpService } from './shared/services/survey-http-services';
@@ -41,6 +42,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    ComponentsModule,
     IonicModule,
     EffectsModule.forFeature([SurveyEffects]),
     StoreModule.forFeature('surveyModule', SurveyReducers),

@@ -1,2 +1,3 @@
-<h4>all surveys</h4>
-<h3 *ngIf="(allSurveys$ | async) as surveys;">surveys length is:</h3>
+<ion-content>
+    <cio-empty-component *ngIf="showEmptyComponent"></cio-empty-component>
+</ion-content>

@@ -1,5 +1,6 @@
 @import "./global-variables.scss";
 @import "./global-mixins.scss";
+@import "../../../theme/fonts.scss";
 
 .cio-green-button {
     @include cio-button($cio-button-height, $cio-width-hundred-percent, $cio-white-color);

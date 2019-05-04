@@ -9,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class AllSurveysComponent implements OnInit {
     allSurveys$: Observable<any[]>;
+    showEmptyComponent = true;
     constructor(private surveyService: SurveyService) { }
     ngOnInit() {
-        console.log('in ion view download----');
         this.allSurveys$ = this.surveyService.getAllSurveys();
         this.allSurveys$.subscribe((res) => {
             console.log('res to check is---', res);
