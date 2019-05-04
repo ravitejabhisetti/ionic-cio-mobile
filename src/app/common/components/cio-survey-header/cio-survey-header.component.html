@@ -5,5 +5,12 @@
             <ion-button class="cio-info-btn font-common card-survey-status">{{cardHeaderData.surveyStatus}}</ion-button>
         </ion-col>
     </ion-row>
-    <ion-row></ion-row>
+    <ion-row class="card-date-row">
+        <ion-col size="6">
+            <ion-label class="font-white-color">{{cardHeaderData.expiryDateToDisplay}} days left</ion-label>
+        </ion-col>
+        <ion-col size="6">
+            <ion-label class="date-info font-white-color">{{cardHeaderData.createdOn | date: 'EEE, MMM d'}}</ion-label>
+        </ion-col>
+    </ion-row>
 </div>

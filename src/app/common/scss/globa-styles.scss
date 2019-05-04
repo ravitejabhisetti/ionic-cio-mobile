@@ -46,7 +46,7 @@
 }
 
 .cio-card-header {
-    height: 84px;
+    height: 90px;
     background-color: #00565b;
 }
 
@@ -64,4 +64,17 @@
 .card-info-row {
     padding-top: 12px;
     margin-left: 12px;
+}
+
+.card-date-row {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.date-info {
+    float: right;
+}
+
+.font-white-color {
+    color: #ffffff;
 }
