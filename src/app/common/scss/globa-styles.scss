@@ -21,3 +21,26 @@
 .tab-text {
     font-size: 14px;
 }
+
+.cio-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+    height: 252px;
+    background-color: #ffffff;
+}
+
+.font-common {
+    font-family: Raleway;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+}
+
+.cio-font-bold {
+    font-weight: bold;
+}
+
+.cio-font-normal {
+    font-weight: normal;
+}
