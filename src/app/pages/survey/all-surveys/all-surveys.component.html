@@ -1,3 +1,6 @@
 <ion-content>
+    <ng-container *ngIf="(allSurveys$ | async) as allSurveys">
+        <cio-cards-list [cardsListType]="{surveys: allSurveys}"></cio-cards-list>
+    </ng-container>
     <cio-empty-component *ngIf="showEmptyComponent"></cio-empty-component>
 </ion-content>

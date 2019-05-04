@@ -15,6 +15,7 @@ export class AllSurveysComponent implements OnInit {
         this.allSurveys$ = this.surveyService.getAllSurveys();
         this.allSurveys$.subscribe((res) => {
             console.log('res to check is---', res);
+            this.showEmptyComponent = false;
         });
     }
 }

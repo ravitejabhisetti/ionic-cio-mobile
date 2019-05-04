@@ -1,0 +1,8 @@
+<ng-container *ngIf="cardsListType.surveys">
+    <ng-container *ngFor="let surveyEntity of cardsListType.surveys;">
+        <ion-card>
+            <cio-survey-header [cardHeaderData]="surveyEntity"></cio-survey-header>
+            <cio-survey-body [cardBodyData]="surveyEntity"></cio-survey-body>
+        </ion-card>
+    </ng-container>
+</ng-container>
