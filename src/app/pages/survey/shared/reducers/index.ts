@@ -10,3 +10,23 @@ export const getSurveyData = createSelector(
     getSurveyState,
     (state: SurveyState) => state.surveyData
 );
+
+export const getPollSurveyData = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.surveyData.filter((surveyEntity) => {
+        if (surveyEntity.questions[0].counts) {
+            return surveyEntity;
+        }
+    })
+);
+
+export const getTriviaSurveyData = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.surveyData.filter((surveyEntity) => {
+        if (!surveyEntity.questions[0].counts) {
+            return surveyEntity;
+        }
+    })
+);
+
+

@@ -12,7 +12,7 @@ export function SurveyReducers(state: SurveyState = initialState, action: Survey
             return Object.assign({}, state, { loader: action.payload });
         case SurveyActions.GET_SURVEY_SUCCESS:
             console.log('action to check is---', action);
-            return Object.assign({}, state, { loader: false, surveyData: action.payload });
+            return Object.assign({}, state, { loader: false, surveyData: action.payload.reverse() });
         case SurveyActions.GET_SURVEY_FAIL:
             return Object.assign({}, state, { loader: false, surveyData: null });
         default:

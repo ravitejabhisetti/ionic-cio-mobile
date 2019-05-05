@@ -1,6 +1,7 @@
 <div class="card-body">
     <ion-label class="font-common survey-ques">{{cardBodyData.questions[0].text}}</ion-label>
     <div class="btns-section">
-        <ion-button class="font-common btn-txt survey-green-btn">Take the survey</ion-button>
+        <ion-button *ngIf="!cardBodyData.answered" class="font-common btn-txt survey-green-btn">Take the survey</ion-button>
+        <ion-button *ngIf="cardBodyData.answered" class="font-common btn-txt survey-grey-btn">View the results</ion-button>
     </div>
 </div>

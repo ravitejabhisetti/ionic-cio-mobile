@@ -1,1 +1,6 @@
-<h4>poll surveys</h4>
+<ion-content>
+    <ng-container *ngIf="(pollSurveys$ | async) as pollSurveys">
+        <cio-cards-list [cardsListType]="{surveys: pollSurveys}"></cio-cards-list>
+    </ng-container>
+    <cio-empty-component *ngIf="showEmptyComponent"></cio-empty-component>
+</ion-content>
