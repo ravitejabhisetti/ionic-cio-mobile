@@ -11,6 +11,11 @@ export const getSurveyData = createSelector(
     (state: SurveyState) => state.surveyData
 );
 
+export const getDataLoaded = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.dataLoaded
+);
+
 export const getPollSurveyData = createSelector(
     getSurveyState,
     (state: SurveyState) => state.surveyData.filter((surveyEntity) => {

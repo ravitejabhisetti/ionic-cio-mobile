@@ -1,3 +1,4 @@
+import { getDataLoaded } from './../reducers/index';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { SurveyModuleState } from '../models';
@@ -24,5 +25,9 @@ export class SurveyService {
 
     getTriviaSurveys() {
         return this.store.select(getTriviaSurveyData);
+    }
+
+    getSurveyDataLoadedStatus() {
+        return this.store.select(getDataLoaded);
     }
 }

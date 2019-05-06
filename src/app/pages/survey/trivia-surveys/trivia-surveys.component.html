@@ -1,4 +1,8 @@
 <ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content refreshingSpinner="dots">
+        </ion-refresher-content>
+    </ion-refresher>
     <ng-container *ngIf="(triviaSurveys$ | async) as triviaSurveys">
         <cio-cards-list [cardsListType]="{surveys: triviaSurveys}"></cio-cards-list>
     </ng-container>
