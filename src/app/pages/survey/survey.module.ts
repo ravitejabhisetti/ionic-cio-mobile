@@ -1,3 +1,4 @@
+import { CioDetailComponent } from './../../common/components/cio-detail-component/cio-detail.component';
 import { ComponentsModule } from './../../common/components/components.module';
 import { EffectsModule } from '@ngrx/effects';
 import { SurveyService } from './shared/services/survey-services';
@@ -49,6 +50,7 @@ const routes: Routes = [
     RouterModule.forChild(routes)
   ],
   providers: [SurveyHttpService, SurveyService],
+  entryComponents: [CioDetailComponent],
   declarations: [SurveyPage, AllSurveysComponent, PollSurveysComponent, TriviaSurveysComponent]
 })
 export class SurveyPageModule { }
