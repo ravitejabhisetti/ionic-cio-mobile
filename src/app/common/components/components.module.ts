@@ -1,3 +1,4 @@
+import { CioSurveyQuesButtonComponent } from './cio-survey-ques-button/cio-survey-ques-button.component';
 import { CioSurveyDetailBody } from './cio-survey-detail-body/cio-survey-detail-body.component';
 import { CioDetailComponent } from './cio-detail-component/cio-detail.component';
 import { CioSurveyBodyComponent } from './cio-survey-body/cio-survey-body.component';
@@ -15,7 +16,8 @@ import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.
         CioSurveyHeaderComponent,
         CioSurveyBodyComponent,
         CioDetailComponent,
-        CioSurveyDetailBody
+        CioSurveyDetailBody,
+        CioSurveyQuesButtonComponent
     ],
     imports: [CommonModule, IonicModule],
     exports: [
@@ -24,7 +26,8 @@ import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.
         CioSurveyBodyComponent,
         CioSurveyHeaderComponent,
         CioDetailComponent,
-        CioSurveyDetailBody
+        CioSurveyDetailBody,
+        CioSurveyQuesButtonComponent
     ]
 })
 
