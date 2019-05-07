@@ -1,5 +1,11 @@
-<ion-content>
-    <div class="detail-survey-header">
+<ion-header>
+    <ng-container *ngIf="type==='surveys'">
         <cio-survey-header (dismissDetailModal)="dismissModal()" [detailPageHeader]="true" [cardHeaderData]="detailModalData"></cio-survey-header>
-    </div>
+    </ng-container>
+</ion-header>
+
+<ion-content>
+    <ng-container *ngIf="type==='surveys'">
+        <cio-survey-detail-body [surveyDetailBodyData]="detailModalData"></cio-survey-detail-body>
+    </ng-container>
 </ion-content>

@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 
 export class CioDetailComponent {
     @Input() detailModalData: any;
+    @Input() type = '';
     constructor(private modalController: ModalController) {
     }
 
