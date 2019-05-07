@@ -16,7 +16,8 @@ export class CioSurveyBodyComponent {
     async displaySurveyDetailsModal() {
         console.log('display details modal---');
         const detailModal = await this.modalController.create({
-            component: CioDetailComponent
+            component: CioDetailComponent,
+            componentProps: { detailModalData: this.cardBodyData }
         });
         return await detailModal.present();
     }

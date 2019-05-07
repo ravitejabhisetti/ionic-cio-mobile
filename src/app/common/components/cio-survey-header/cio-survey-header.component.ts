@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'cio-survey-header',
@@ -8,4 +8,10 @@ import { Component, Input } from '@angular/core';
 
 export class CioSurveyHeaderComponent {
     @Input() cardHeaderData: any;
+    @Input() detailPageHeader = false;
+    @Output() dismissDetailModal = new EventEmitter();
+
+    dismissModal(event) {
+        this.dismissDetailModal.emit();
+    }
 }

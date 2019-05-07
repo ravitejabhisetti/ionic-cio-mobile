@@ -1,16 +1,17 @@
-<div class="cio-card-header">
+<div [ngClass]="detailPageHeader?'cio-detail-page-card-header': ''" class="cio-card-header">
     <ion-row class="card-info-row">
         <ion-col size="12">
             <ion-button class="cio-info-btn font-common card-survey-type">{{cardHeaderData.surveyType}}</ion-button>
             <ion-button class="cio-info-btn font-common card-survey-status">{{cardHeaderData.surveyStatus}}</ion-button>
+            <ion-icon *ngIf="detailPageHeader" (click)="dismissModal($event)" class="font-common icon-detail-page-close" name="close"></ion-icon>
         </ion-col>
     </ion-row>
     <ion-row class="card-date-row">
         <ion-col size="6">
-            <ion-label class="font-white-color">{{cardHeaderData.expiryDateToDisplay}} days left</ion-label>
+            <ion-label class="font-common font-white-color">{{cardHeaderData.expiryDateToDisplay}} days left</ion-label>
         </ion-col>
         <ion-col size="6">
-            <ion-label class="date-info font-white-color">{{cardHeaderData.createdOn | date: 'EEE, MMM d'}}</ion-label>
+            <ion-label class="font-common date-info font-white-color">{{cardHeaderData.createdOn | date: 'EEE, MMM d'}}</ion-label>
         </ion-col>
     </ion-row>
 </div>

@@ -50,6 +50,10 @@
     background-color: #00565b;
 }
 
+.cio-detail-page-card-header {
+    height: 129px;
+}
+
 .cio-info-btn {
     border-radius: 11px;
     height: 22px;
@@ -82,4 +86,14 @@
 .card-body {
     margin: 16px;
     background: #ffffff;
+}
+
+.icon-detail-page-close {
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    float: right;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-top: 5px;
 }
