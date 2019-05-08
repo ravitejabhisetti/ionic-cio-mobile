@@ -1,1 +1,14 @@
-<h4>button component</h4>
+<div class="survey-btn">
+    <ng-container *ngFor="let ques of surveyDetailBodyData.questions[0].options; let i = index;">
+        <div (click)="selectOption(i)" [ngClass]="buttonSelected===i? 'btn-selected-color':'btn-unselected-color'" class="survey-ques-btn">
+            <ion-row>
+                <ion-col class="font-common btn-txt ion-text-left cio-font-bold" size="1">
+                    {{getOption(i)}}
+                </ion-col>
+                <ion-col class="font-common btn-txt ion-text-left cio-font-bold" size="11">
+                    {{ques}}
+                </ion-col>
+            </ion-row>
+        </div>
+    </ng-container>
+</div>

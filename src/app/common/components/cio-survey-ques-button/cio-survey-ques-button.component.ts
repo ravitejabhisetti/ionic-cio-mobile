@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'cio-survey-ques-button',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 
 export class CioSurveyQuesButtonComponent {
+    @Input() surveyDetailBodyData: any;
+    buttonSelected = null;
 
+    getOption(index) {
+        return String.fromCharCode(97 + index).toUpperCase();
+    }
+
+    selectOption(index) {
+        this.buttonSelected = index;
+    }
 }
