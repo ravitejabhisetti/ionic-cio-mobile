@@ -16,7 +16,12 @@ export class CioSurveyQuesButtonComponent {
     }
 
     selectOption(index) {
-        this.buttonSelected = index;
-        this.enableSubmit = true;
+        if (!(Number(this.buttonSelected) === Number(index)) || this.buttonSelected === null) {
+            this.buttonSelected = index;
+            this.enableSubmit = true;
+        } else {
+            this.buttonSelected = null;
+            this.enableSubmit = false;
+        }
     }
 }

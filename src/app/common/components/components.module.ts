@@ -8,6 +8,7 @@ import { CioEmptyComponent } from './cio-empty-component/cio-empty-component';
 import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.component';
+import { CioSurveyAnsweredButton } from './cio-survey-answered-btn/cio-survey-answered-btn.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.
         CioSurveyBodyComponent,
         CioDetailComponent,
         CioSurveyDetailBody,
-        CioSurveyQuesButtonComponent
+        CioSurveyQuesButtonComponent,
+        CioSurveyAnsweredButton
     ],
     imports: [CommonModule, IonicModule],
     exports: [
@@ -27,7 +29,8 @@ import { CioSurveyHeaderComponent } from './cio-survey-header/cio-survey-header.
         CioSurveyHeaderComponent,
         CioDetailComponent,
         CioSurveyDetailBody,
-        CioSurveyQuesButtonComponent
+        CioSurveyQuesButtonComponent,
+        CioSurveyAnsweredButton
     ]
 })
 
