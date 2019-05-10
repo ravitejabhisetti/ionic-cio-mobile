@@ -105,3 +105,12 @@
 .cio-font-bold {
     font-weight: bold;
 }
+
+.survey-grey-btn {
+    width: 100%;
+    height: 51px;
+    --border-radius: 25.5px;
+    --background: #b8b8b8;
+    --background-activated: #000000;
+    text-transform: uppercase;
+}

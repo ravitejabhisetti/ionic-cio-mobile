@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 export class CioSurveyQuesButtonComponent {
     @Input() surveyDetailBodyData: any;
     buttonSelected = null;
+    enableSubmit = null;
 
     getOption(index) {
         return String.fromCharCode(97 + index).toUpperCase();
@@ -16,5 +17,6 @@ export class CioSurveyQuesButtonComponent {
 
     selectOption(index) {
         this.buttonSelected = index;
+        this.enableSubmit = true;
     }
 }

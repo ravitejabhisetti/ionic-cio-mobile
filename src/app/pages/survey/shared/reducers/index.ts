@@ -19,7 +19,7 @@ export const getDataLoaded = createSelector(
 export const getPollSurveyData = createSelector(
     getSurveyState,
     (state: SurveyState) => state.surveyData.filter((surveyEntity) => {
-        if (surveyEntity.questions[0].counts) {
+        if (surveyEntity.questions[0].correctAnswer == null) {
             return surveyEntity;
         }
     })
@@ -28,7 +28,7 @@ export const getPollSurveyData = createSelector(
 export const getTriviaSurveyData = createSelector(
     getSurveyState,
     (state: SurveyState) => state.surveyData.filter((surveyEntity) => {
-        if (!surveyEntity.questions[0].counts) {
+        if (surveyEntity.questions[0].hasOwnProperty('correctAnswer')) {
             return surveyEntity;
         }
     })

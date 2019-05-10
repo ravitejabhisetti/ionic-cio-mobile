@@ -53,7 +53,7 @@ export class SurveyEffects {
     formatSurveyResponse(data: any) {
         for (let i = 0; i < data.length; i++) {
             data[i].surveyStatus = data[i].answered ? 'Closed' : 'Open';
-            data[i].surveyType = data[i].questions[0].counts ? 'Poll' : 'Trivia';
+            data[i].surveyType = data[i].questions[0].hasOwnProperty('correctAnswer') ? 'Trivia' : 'Poll';
             data[i].expiryDateToDisplay = this.getExpiryDate(data[i]);
         }
         return data;

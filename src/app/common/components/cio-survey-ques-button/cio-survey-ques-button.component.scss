@@ -19,6 +19,7 @@
 .ion-text-left {
     text-align: left !important;
     font-size: 16px;
+    text-transform: capitalize;
 }
 
 .btn-selected-color {
@@ -27,4 +28,8 @@
 
 .btn-unselected-color {
     background: #00A4B6;
+}
+
+.enableSubmit {
+    --background: #63aa00;
 }
