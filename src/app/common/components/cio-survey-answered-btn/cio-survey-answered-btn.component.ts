@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'cio-survey-answered-btn',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class CioSurveyAnsweredButton {
-
+    @Input() option = '';
+    @Input() optionName = '';
+    @Input() surveyDetailBodyData: any;
+    @Input() quesPercentAnswered = null;
+    @Input() optionIndex = null;
 }

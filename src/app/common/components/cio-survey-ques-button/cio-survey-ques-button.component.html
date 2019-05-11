@@ -15,7 +15,9 @@
     </ng-container>
     <ng-container *ngIf="surveyDetailBodyData.answered">
         <ng-container *ngFor="let ques of surveyDetailBodyData.questions[0].options; let i = index;">
-           <cio-survey-answered-btn></cio-survey-answered-btn>
+            <cio-survey-answered-btn [optionIndex]="i" [quesPercentAnswered]="getPercent(i)" [surveyDetailBodyData]="surveyDetailBodyData" [option]="ques"
+                [optionName]="getOption(i)">
+            </cio-survey-answered-btn>
         </ng-container>
     </ng-container>
     <ion-button *ngIf="!surveyDetailBodyData.answered" [ngClass]="enableSubmit?'enableSubmit':''" class="font-common cio-font-bold btn-txt survey-grey-btn">Submit</ion-button>

@@ -1,1 +1,29 @@
-<h5>survey btn</h5>
+<div [ngClass]="[surveyDetailBodyData.surveyType==='Trivia' &&
+ surveyDetailBodyData.questions[0].correctAnswer===optionIndex ? 'answer-green-btn':'answer-red-btn',
+  surveyDetailBodyData.surveyType==='Poll'?'answer-poll-btn':'']" class="answer-btn answer-green-btn">
+    <ion-row>
+        <ion-col class="font-common btn-txt cio-font-bold ion-text-left" size="1">
+            {{optionName}}
+        </ion-col>
+        <ion-col class="font-common btn-txt cio-font-bold ion-text-left" size="10">
+            {{option}}
+        </ion-col>
+        <ion-col size="1">
+            <ion-icon class="font-common answer-icon" *ngIf="surveyDetailBodyData.surveyType==='Trivia' &&
+            surveyDetailBodyData.questions[0].correctAnswer!==optionIndex" name="close"></ion-icon>
+            <ion-icon class="font-common answer-icon" *ngIf="surveyDetailBodyData.surveyType==='Trivia' &&
+            surveyDetailBodyData.questions[0].correctAnswer===optionIndex" name="checkmark"></ion-icon>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="9">
+            <div class="answer-percent-section">
+                <div class="answer-percent-row"></div>
+                <div [ngStyle]="{'width':quesPercentAnswered}" class="answer-correct-percent"></div>
+            </div>
+        </ion-col>
+        <ion-col class="font-common answer-percent-num cio-font-bold" size="3">
+            {{quesPercentAnswered}}
+        </ion-col>
+    </ion-row>
+</div>

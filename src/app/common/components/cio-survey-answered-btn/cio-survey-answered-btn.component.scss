@@ -1,1 +1,54 @@
 @import "../../scss/globa-styles.scss";
+
+.answer-btn {
+    min-height: 70px;
+    border-radius: 8px;
+    box-shadow: 0 0 11px 0 rgba(142, 198, 64, 0.5);
+    margin-bottom: 16px;
+    padding: 8px 0px 8px 8px;
+    color: #ffffff;
+}
+
+.answer-green-btn {
+    background-color: #8ec640;
+}
+
+.answer-red-btn {
+    background-color: #b5022e;
+}
+
+.answer-poll-btn {
+    background-color: #00A4B6;
+    box-shadow: none;
+}
+
+.answer-icon {
+    color: #ffffff;
+    height: 30px;
+    width: 30px;
+    float: right;
+    font-size: 14px;
+    top: 0;
+    position: absolute ;
+    right:5px;
+}
+
+.answer-percent-row {
+    height: 12px;
+    background-color: #f0f0f0;
+    opacity: 0.4;
+}
+
+.answer-correct-percent {
+    box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0);
+    background-color: #ffffff !important;
+    height: 12px;
+    opacity: 1 !important;
+    position: absolute;
+    top: 5px;
+}
+
+.answer-percent-num {
+    font-size: 12px;
+    padding-top: 2px;
+}
