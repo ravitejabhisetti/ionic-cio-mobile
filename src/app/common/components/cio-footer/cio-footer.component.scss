@@ -1,0 +1,17 @@
+@import '../../scss/globa-styles.scss';
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex:1;
+}
+
+.enable-btn {
+    opacity: 1;
+}
+
+.disable-btn {
+    opacity: 0.2;
+}

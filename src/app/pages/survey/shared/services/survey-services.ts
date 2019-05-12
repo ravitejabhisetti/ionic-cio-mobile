@@ -1,4 +1,4 @@
-import { getDataLoaded } from './../reducers/index';
+import { getDataLoaded, getSurveyModalData, getSelectedSurveyIndex, getActiveSurveysList } from './../reducers/index';
 import { Injectable } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { SurveyModuleState } from '../models';
@@ -30,4 +30,20 @@ export class SurveyService {
     getSurveyDataLoadedStatus() {
         return this.store.select(getDataLoaded);
     }
+
+    // getSurveyModalData() {
+    //     return this.store.select(getSurveyModalData);
+    // }
+
+    // getSelectedSurveyIndex() {
+    //     return this.store.select(getSelectedSurveyIndex);
+    // }
+
+    // updateActiveSurveysList(surveysList) {
+    //     this.store.dispatch(new SurveyActions.UpdateActiveSurveysList(surveysList));
+    // }
+
+    // getSelectedSurveysActive() {
+    //     return this.store.select(getActiveSurveysList);
+    // }
 }

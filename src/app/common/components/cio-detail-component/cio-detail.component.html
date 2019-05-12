@@ -1,11 +1,18 @@
 <ion-header>
-    <ng-container *ngIf="type==='surveys'">
+    <ng-container *ngIf="type==='surveys' && detailModalData">
         <cio-survey-header (dismissDetailModal)="dismissModal()" [detailPageHeader]="true" [cardHeaderData]="detailModalData"></cio-survey-header>
     </ng-container>
 </ion-header>
 
 <ion-content>
-    <ng-container *ngIf="type==='surveys'">
+    <ng-container *ngIf="type==='surveys' && detailModalData">
         <cio-survey-detail-body [surveyDetailBodyData]="detailModalData"></cio-survey-detail-body>
     </ng-container>
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <cio-footer (nextButtonEmitter)="updateNextModalData()" (backButtonEmitter)="updateBackModalData()" [enableBackButton]="enableBackButton"
+            [enableNextButton]="enableNextButton"></cio-footer>
+    </ion-toolbar>
+</ion-footer>

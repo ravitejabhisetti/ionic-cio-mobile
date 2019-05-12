@@ -16,6 +16,21 @@ export const getDataLoaded = createSelector(
     (state: SurveyState) => state.dataLoaded
 );
 
+export const getSurveyModalData = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.selectedSurveyModalData
+);
+
+export const getSelectedSurveyIndex = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.selectedSurveyIndex
+);
+
+export const getActiveSurveysList = createSelector(
+    getSurveyState,
+    (state: SurveyState) => state.surveysListActive
+);
+
 export const getPollSurveyData = createSelector(
     getSurveyState,
     (state: SurveyState) => state.surveyData.filter((surveyEntity) => {

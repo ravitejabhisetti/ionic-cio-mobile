@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
     selector: 'cio-cards-list',
@@ -6,7 +6,10 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['cio-cards-list.component.scss']
 })
 
-export class CioCardsListComponent {
+export class CioCardsListComponent implements OnInit {
     @Input() cardsListType: any;
+
+    ngOnInit() {
+    }
 
 }

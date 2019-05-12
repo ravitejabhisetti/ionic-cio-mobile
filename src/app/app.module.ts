@@ -1,3 +1,4 @@
+import { UserCommonService } from './store/services/user-common.service';
 import { ComponentsModule } from './common/components/components.module';
 import { EffectsModule } from '@ngrx/effects';
 import { CommonModule } from '@angular/common';
@@ -15,7 +16,7 @@ import { HttpModule, XHRBackend, RequestOptions } from '@angular/http';
 import { CioAppApiService } from './common/services/cio-app-api-services';
 import { createCioAppApi } from './common/services/create-cio-app-api';
 import { StoreModule } from '@ngrx/store';
-import { AppReducers } from './app.reducers';
+import { AppReducers } from './store/reducers/app-reducers';
 import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { IonicStorageModule } from '@ionic/storage';
   providers: [
     StatusBar,
     SplashScreen,
+    UserCommonService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {
       provide: CioAppApiService,

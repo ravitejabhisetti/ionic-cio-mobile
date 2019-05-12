@@ -1,8 +1,8 @@
 <ng-container *ngIf="cardsListType.surveys">
-    <ng-container *ngFor="let surveyEntity of cardsListType.surveys;">
+    <ng-container *ngFor="let surveyEntity of cardsListType.surveys;let i = index;">
         <ion-card class="cio-card">
             <cio-survey-header [cardHeaderData]="surveyEntity"></cio-survey-header>
-            <cio-survey-body [cardBodyData]="surveyEntity"></cio-survey-body>
+            <cio-survey-body [activeModalDataArray]="cardsListType.surveys" [surveyIndex]="i" [cardBodyData]="surveyEntity"></cio-survey-body>
         </ion-card>
     </ng-container>
 </ng-container>

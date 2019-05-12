@@ -1,3 +1,4 @@
+import { CioFooterComponent } from './cio-footer/cio-footer.component';
 import { CioSurveyQuesButtonComponent } from './cio-survey-ques-button/cio-survey-ques-button.component';
 import { CioSurveyDetailBody } from './cio-survey-detail-body/cio-survey-detail-body.component';
 import { CioDetailComponent } from './cio-detail-component/cio-detail.component';
@@ -19,7 +20,8 @@ import { CioSurveyAnsweredButton } from './cio-survey-answered-btn/cio-survey-an
         CioDetailComponent,
         CioSurveyDetailBody,
         CioSurveyQuesButtonComponent,
-        CioSurveyAnsweredButton
+        CioSurveyAnsweredButton,
+        CioFooterComponent
     ],
     imports: [CommonModule, IonicModule],
     exports: [
@@ -30,7 +32,8 @@ import { CioSurveyAnsweredButton } from './cio-survey-answered-btn/cio-survey-an
         CioDetailComponent,
         CioSurveyDetailBody,
         CioSurveyQuesButtonComponent,
-        CioSurveyAnsweredButton
+        CioSurveyAnsweredButton,
+        CioFooterComponent
     ]
 })
 

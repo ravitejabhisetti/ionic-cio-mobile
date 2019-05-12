@@ -1,6 +1,8 @@
+import { UserCommonService } from './../../../store/services/user-common.service';
 import { CioDetailComponent } from './../cio-detail-component/cio-detail.component';
 import { Component, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { SurveyService } from '../../../pages/survey/shared/services/survey-services';
 
 @Component({
     selector: 'cio-survey-body',
@@ -10,14 +12,17 @@ import { ModalController } from '@ionic/angular';
 
 export class CioSurveyBodyComponent {
     @Input() cardBodyData: any;
-    constructor(private modalController: ModalController) {
+    @Input() surveyIndex = null;
+    @Input() activeModalDataArray: any = [];
+    constructor(private modalController: ModalController, private surveyService: SurveyService,
+        private userCommonService: UserCommonService) {
     }
 
     async displaySurveyDetailsModal() {
-        console.log('display details modal---');
+        this.userCommonService.updateModalData(this.cardBodyData, this.surveyIndex);
         const detailModal = await this.modalController.create({
             component: CioDetailComponent,
-            componentProps: { type: 'surveys', detailModalData: this.cardBodyData }
+            componentProps: { type: 'surveys', activeModalDataArray: this.activeModalDataArray }
         });
         return await detailModal.present();
     }

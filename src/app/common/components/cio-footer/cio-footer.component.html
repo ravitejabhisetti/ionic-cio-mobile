@@ -1,0 +1,11 @@
+<div class="footer-container">
+    <div>
+        <span [ngClass]="enableBackButton?'enable-btn':'disable-btn'" (click)="goToBack($event)" class="font-common btn-txt cio-font-bold">BACK</span>
+    </div>
+    <div>
+        <span>center</span>
+    </div>
+    <div>
+        <span [ngClass]="enableNextButton?'enable-btn':'disable-btn'" (click)="goToNext($event)" class="font-common btn-txt cio-font-bold">NEXT</span>
+    </div>
+</div>
